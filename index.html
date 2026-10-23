@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo Climático</title>
+    <meta name="robots" content="noindex, nofollow"> 
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/4018d9f845.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<header>
+        <nav>
+            <div class="logo">ATMOS<span>//</span></div>
+            <ul class="nav-links">
+                <li><a href="#monitor">TELEMETRÍA</a></li>
+                <li><a href="#horario">PRONÓSTICO 24H</a></li>
+                <li><a href="#extendido">7 DÍAS</a></li>
+            </ul>
+            <a href="https://victorrios2010s15-cmyk.github.io/portafolio/" class="btn-telegram">Sobre mi</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="cityInput" class="search-box" placeholder="Escribe cualquier ciudad, pueblo o estado de Venezuela...">
+            <button id="searchBtn" class="btn-search">BUSCAR LOCALIDAD</button>
+        </div>
+
+        <section id="monitor" class="weather-grid">
+            <div class="cyber-card main-panel" id="mainPanel">
+                <div class="city-name" id="locationName">SISTEMA LOCAL</div>
+                <div class="tech-badge" id="geoBadge">GEOLOCALIZACIÓN ACTIVA</div>
+                <div class="temp-display" id="currentTemp">--°</div>
+                <div class="weather-status" id="weatherCondition">ESPERANDO UBICACIÓN</div>
+            </div>
+
+            <div class="cyber-card">
+                <h3 class="section-title">INDICADORES ATMOSFÉRICOS</h3>
+                <div class="metrics-subgrid" id="metricsGrid">
+                    <div class="metric-item">
+                        <div class="metric-label">Humedad Relativa</div>
+                        <div class="metric-value" id="valHumidity">--%</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">Velocidad del Viento</div>
+                        <div class="metric-value" id="valWind">-- km/h</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">Presión Barométrica</div>
+                        <div class="metric-value" id="valPressure">-- hPa</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">Sensación Térmica</div>
+                        <div class="metric-value" id="valApparent">--°C</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="horario" class="forecast-section">
+            <h3 class="section-title">PROYECCIÓN HORARIA</h3>
+            <div class="hourly-scroll" id="hourlyContainer"></div>
+        </section>
+
+        <section id="extendido" class="forecast-section">
+            <h3 class="section-title">PRONÓSTICO EXTENDIDO</h3>
+            <div class="weekly-grid" id="weeklyContainer"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Víctor Ríos. Estilo Atmosférico Rediseñado para Venezuela.</p>
+        <div class="footer-badges">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">GEO-DECODE</span>
+            <span class="tech-badge">OPEN-METEO API</span>
+        </div>
+        <div class="footer-socials">
+            <a href="https://github.com/victorrios2010s15-cmyk">github</a>
+            <a href="mailto:victorrios2010s@gmail.com">Email</a>
+            <a href="https://x.com/Victor2010s">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
