@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoreo Climático</title>
-    <meta name="robots" content="noindex, nofollow"> 
+    <title>ATMOS // Monitoreo Meteorológico Nacional</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="https://kit.fontawesome.com/4018d9f845.js" crossorigin="anonymous"></script>
-
 </head>
-<body>
-<header>
+<body id="appBody" class="weather-clear-day">
+    <header>
         <nav>
             <div class="logo">ATMOS<span>//</span></div>
             <ul class="nav-links">
@@ -18,7 +15,7 @@
                 <li><a href="#horario">PRONÓSTICO 24H</a></li>
                 <li><a href="#extendido">7 DÍAS</a></li>
             </ul>
-            <a href="https://victorrios2010s15-cmyk.github.io/portafolio/" class="btn-telegram">Sobre mi</a>
+            <a href="https://t.me" class="btn-telegram">Contrátame</a>
         </nav>
     </header>
 
@@ -37,8 +34,8 @@
             </div>
 
             <div class="cyber-card">
-                <h3 class="section-title">INDICADORES ATMOSFÉRICOS</h3>
-                <div class="metrics-subgrid" id="metricsGrid">
+                <h3 class="section-title">TELEMETRÍA ATMOSFÉRICA</h3>
+                <div class="metrics-subgrid">
                     <div class="metric-item">
                         <div class="metric-label">Humedad Relativa</div>
                         <div class="metric-value" id="valHumidity">--%</div>
@@ -55,46 +52,51 @@
                         <div class="metric-label">Sensación Térmica</div>
                         <div class="metric-value" id="valApparent">--°C</div>
                     </div>
+                    <div class="metric-item">
+                        <div class="metric-label">Posición Sol: Salida</div>
+                        <div class="metric-value" id="valSunrise">--:--</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">Posición Sol: Puesta</div>
+                        <div class="metric-value" id="valSunset">--:--</div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="horario" class="forecast-section">
-            <h3 class="section-title">PROYECCIÓN HORARIA</h3>
+            <h3 class="section-title">PROYECCIÓN HORARIA (DETECCIÓN DE LLUVIA / SOL)</h3>
             <div class="hourly-scroll" id="hourlyContainer"></div>
         </section>
 
         <section id="extendido" class="forecast-section">
-            <h3 class="section-title">PRONÓSTICO EXTENDIDO</h3>
+            <h3 class="section-title">PRONÓSTICO EXTENDIDO 7 DÍAS</h3>
             <div class="weekly-grid" id="weeklyContainer"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Víctor Ríos. Estilo Atmosférico Rediseñado para Venezuela.</p>
+        <p>&copy; 2026 Víctor Ríos. Estilo Atmosférico con Fondos Dinámicos Reales.</p>
         <div class="footer-badges">
             <span class="tech-badge">HTML5</span>
             <span class="tech-badge">CSS3</span>
-            <span class="tech-badge">GEO-DECODE</span>
+            <span class="tech-badge">DYNAMIC-BG</span>
             <span class="tech-badge">OPEN-METEO API</span>
         </div>
         <div class="footer-socials">
-            <a href="https://github.com/victorrios2010s15-cmyk">github</a>
-            <a href="mailto:victorrios2010s@gmail.com">Email</a>
-            <a href="https://x.com/Victor2010s">Twitter</a>
+            <a href="https://github.com">GITHUB</a>
+            <a href="mailto:tu_correo@dominio.com">EMAIL</a>
+            <a href="https://x.com">TWITTER</a>
         </div>
     </footer>
 
-        <div id="customModal" class="modal-overlay">
+    <div id="customModal" class="modal-overlay">
         <div class="modal-content">
             <h4 class="modal-title">AVISO DEL SISTEMA //</h4>
             <p id="modalMessage" class="modal-text"></p>
             <button id="modalBtn" class="btn-modal">ACEPTAR</button>
         </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
 
     <script src="./script.js"></script>
 </body>
